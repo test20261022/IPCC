@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+
+# 环境变量（含密钥，禁止提交）
+.env
+
+# 本地文件存储（通话录音等）
+storage/
+*.log
+
+# 前端
+node_modules/
+dist/
+dist-ssr/
+.vite/
+*.local
+
+# 本地运行快照与临时数据
+.task3-original.json
+*.sqlite3
+*.dump
+*.bak
+
+# 测试与构建缓存
+.coverage
+htmlcov/
+coverage.xml
+*.tsbuildinfo
+
+# 工具与 IDE / 操作系统
+.trae/
+.idea/
+.DS_Store
+Thumbs.db
+*.orig
+*.rej

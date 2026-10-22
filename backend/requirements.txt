@@ -1,0 +1,30 @@
+# ---- 运行时依赖 ----
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+email-validator>=2.2.0
+python-multipart>=0.0.20
+
+# 数据库
+SQLAlchemy>=2.0.36
+psycopg[binary]>=3.2.3
+alembic>=1.14.0
+
+# 认证
+PyJWT>=2.10.0
+bcrypt>=4.2.0
+
+# 缓存 / 队列（Redis 为可选，缺失自动降级）
+redis>=5.2.0
+
+# 定时任务（超时回收 / 重试调度）
+APScheduler>=3.10.4
+
+# Excel / CSV 名单解析
+openpyxl>=3.1.5
+
+# ---- 开发与测试 ----
+pytest>=8.3.0
+httpx>=0.28.0
+ruff>=0.8.0

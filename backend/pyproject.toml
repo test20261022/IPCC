@@ -1,0 +1,16 @@
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+exclude = ["alembic/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+# B008：FastAPI 的 Depends/Query 惯用法，属正常写法
+ignore = ["B008"]
+
+[tool.ruff.lint.per-file-ignores]
+# conftest 需要在导入 app 之前注入测试环境变量（如 BCRYPT_ROUNDS）
+"tests/conftest.py" = ["E402"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
