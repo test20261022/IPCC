@@ -14,6 +14,8 @@ os.environ.setdefault("BCRYPT_ROUNDS", "4")
 os.environ.setdefault("SCHEDULER_ENABLED", "false")
 # ASR 演示环境可能配为 aliyun（模拟实现，含轮询延时），测试固定用 mock 保证确定性与速度
 os.environ.setdefault("ASR_PROVIDER", "mock")
+# 回调签名密钥：CI 与干净环境没有 backend/.env，缺省为空会让回调用例全部 500
+os.environ.setdefault("CALL_GATEWAY_CALLBACK_SECRET", "test-callback-secret")
 
 import pytest
 from alembic.config import Config as AlembicConfig
